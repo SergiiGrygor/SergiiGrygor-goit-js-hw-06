@@ -12,10 +12,15 @@ const outputNameRef = document.querySelector("#name-output")
 
 inputNameRef.addEventListener("input", (event) => {
     const inputValue = event.target.value;
+
     inputNameRef.addEventListener("change", (event) => {
-        outputNameRef.disabled = !event.target.checked;
-        outputNameRef.textContent = `${inputValue}`;
-    });
+        if (inputValue) {
+            outputNameRef.disabled = !event.target.checked;
+            outputNameRef.textContent = `${inputValue}`;
+         }else{
+            outputNameRef.textContent = "Anonymous";
+         }
+    })
   });
 
 

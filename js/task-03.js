@@ -20,8 +20,8 @@ galeryRef.insertAdjacentHTML(
   `beforeend`,
   images.map((element) => `<li class="galery__item">
     <img class="img"
-    src="element.url"
-    alt="element.alt">
+    src="${element.url}"
+    alt="${element.alt}">
     </img>
   </li>`
   ).join('')
